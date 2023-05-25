@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="reset.css/reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="img/LogoVector.png" alt="Logo de Alura" />
+    </header>
+    <main>
+      <section class="right-pannel">
+        <textarea
+          class="text-area"
+          cols="30"
+          rows="9"
+          placeholder="Ingrese el texto aquí"
+        ></textarea>
+        <div>
+          <span class="informacion">
+            <img src="img/exclamation.png" alt="instrucciones" />
+            Solo letras minúsculas y sin acentos
+          </span>
+        </div>
+        <div class="botones">
+          <button class="btn-encriptar" onclick="btnEncriptar()">
+            Encriptar
+          </button>
+          <button class="btn-desencriptar" onclick="btnDesencriptar()">
+            Desencriptar
+          </button>
+        </div>
+      </section>
+      <section class="left-pannel">
+        <div class="mensajes">
+          <textarea class="mensaje" cols="20" rows="9"> </textarea>
+          <span class="ningun-mensaje">No se ha encontrado ningún mensaje</span>
+          <span class="ingrese-texto">
+            ¡Ingresa el texto que desees encriptar o desencriptar!
+          </span>
+        </div>
+        <div>
+          <button class="btn-copiar" onclick="btnCopiar()">Copiar</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p id="foot">
+        Desarrollado por<br />LeandroSBF
+        <a href="https://github.com/LeandroSBF/" target="_blank"
+          ><img class="logos" src="/img/github.png" alt="Github logo" /></a
+        ><a href="https://www.linkedin.com/in/leandro-s-bruno" target="_blank"
+          ><img class="logos" src="/img/linkedin.png" alt="Linkedin logo"
+        /></a>
+      </p>
+    </footer>
+    <script src="/script.js"></script>
+  </body>
+</html>
