@@ -83,25 +83,6 @@ function ocultarTxt2() {
   itInvisible.style.display = "none";
 }
 
-/*
-function btnCopiar() {
-  copiar();
-}
-
-function copiar() {
-  document.querySelector(".mensaje").value =
-    document.querySelector("text-area").value;
-  textArea.value = "textoEncriptado";
-  mensaje.value = "";
-}*/
-/*const textArea = document.querySelector(".text-area");
-const mensaje = document.querySelector(".mensaje");*/
-
-/*
-function copiar() {
-  document.querySelector(".mensaje").value; = document.querySelector(".text-area").value;
-}*/
-
 function btnCopiar() {
   var mensaje = document.getElementsByClassName("mensaje")[0];
   var textarea = document.getElementsByClassName("text-area")[0];
