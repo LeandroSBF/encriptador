@@ -25,7 +25,8 @@
           class="text-area"
           cols="30"
           rows="9"
-          placeholder="Ingrese el texto aquí"
+          placeholder="Ingrese aquí el texto a encriptar"
+          onkeypress="return ((event.charCode === 32) || (event.charCode >= 97 && event.charCode <= 122))"
         ></textarea>
         <div>
           <span class="informacion">
