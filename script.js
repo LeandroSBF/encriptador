@@ -95,13 +95,24 @@ function btnCopiar() {
   var mensaje = document.getElementsByClassName("mensaje")[0];
   var textarea = document.getElementsByClassName("text-area")[0];
 
-  // Copy the text from mensaje to textarea
   textarea.value = mensaje.value;
 
-  // Clear the content of mensaje
   mensaje.value = "";
 
   if (window.innerWidth < 480) {
     textArea.focus();
+  }
+}
+
+function validarTexto(textarea) {
+  const inputValue = textarea.value;
+  const regex = /^[a-z\s]*$/i;
+  const isValid = regex.test(inputValue);
+
+  if (!isValid) {
+    alert(
+      "¡Recuerda que solo se permiten letras minúsculas, sin acentos ni otros caraccteres especiales!"
+    );
+    textarea.value = inputValue.replace(/[^a-z\s]/gi, "");
   }
 }
