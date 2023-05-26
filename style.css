@@ -179,9 +179,98 @@ main {
 }
 
 @media screen and (max-width: 480px) {
-  .right-pannel,
+  body {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .logo {
+    width: 10%;
+    margin-left: 2%;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .left-pannel {
-    width: 98%;
-    float: left;
+    width: 90%;
+    height: auto;
+  }
+
+  .text-area {
+    margin: 20px 5%;
+    width: 90%;
+  }
+
+  .right-pannel {
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+    background-color: #e5e5e5;
+    position: relative;
+  }
+
+  .mensajes {
+    width: 90%;
+    margin-left: 5%;
+    position: relative;
+    height: 430px;
+  }
+
+  .mensaje {
+    background-size: 200px 180px;
+    background-position: center;
+    margin: 20px 0%;
+  }
+
+  .mensajes,
+  footer {
+    position: relative;
+    z-index: 1;
+    top: 0;
+  }
+
+  .ningun-mensaje,
+  .ingrese-texto {
+    width: 90%;
+    margin-left: 10px;
+    text-align: center;
+  }
+
+  .botones {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .btn-encriptar,
+  .btn-desencriptar {
+    width: 90%;
+    margin: 10px 5%;
+  }
+
+  .btn-copiar {
+    display: none;
+    width: 85%;
+    margin: 10px 5%;
+    position: absolute;
+    bottom: 55px;
+    right: 9px;
+    z-index: 1;
+  }
+
+  .informacion {
+    margin: 10px 5%;
+    position: static;
+  }
+
+  #foot {
+    text-align: center;
+  }
+
+  .logos {
+    margin-left: 5px;
   }
 }

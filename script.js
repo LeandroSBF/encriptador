@@ -15,6 +15,10 @@ function btnEncriptar() {
   mostrarBtn();
   ocultarTxt1();
   ocultarTxt2();
+
+  if (window.innerWidth < 480) {
+    mensaje.focus();
+  }
 }
 
 function encriptar(stringEncriptada) {
@@ -42,6 +46,10 @@ function btnDesencriptar() {
   const textoEncriptado = desencriptar(textArea.value);
   mensaje.value = textoEncriptado;
   textArea.value = "";
+
+  if (window.innerWidth < 480) {
+    mensaje.focus();
+  }
 }
 
 function desencriptar(stringDesencriptada) {
@@ -92,4 +100,8 @@ function btnCopiar() {
 
   // Clear the content of mensaje
   mensaje.value = "";
+
+  if (window.innerWidth < 480) {
+    textArea.focus();
+  }
 }
