@@ -104,15 +104,17 @@ function btnCopiar() {
   }
 }
 
-function validarTexto(textarea) {
-  const inputValue = textarea.value;
-  const regex = /^[a-z\s]*$/i;
-  const isValid = regex.test(inputValue);
+function validarTexto(event) {
+  const charCode = event.charCode;
+  const lowercaseLetters = charCode >= 97 && charCode <= 122;
+  const isSpace = charCode === 32;
 
-  if (!isValid) {
+  if (!lowercaseLetters && !isSpace) {
     alert(
       "¡Recuerda que solo se permiten letras minúsculas, sin acentos ni otros caraccteres especiales!"
     );
-    textarea.value = inputValue.replace(/[^a-z\s]/gi, "");
+    return false;
   }
+
+  return true;
 }
